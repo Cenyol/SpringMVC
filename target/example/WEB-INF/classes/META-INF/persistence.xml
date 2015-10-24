@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+    <persistence-unit name="defaultPersistenceUnit"  transaction-type="RESOURCE_LOCAL">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <properties>
+            <!-- 使用MySQL方言 -->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect"/>
+            <!-- 数据库连接的URL地址 -->
+            <property name="hibernate.connection.url"
+                      value="jdbc:mysql://localhost:3306/test"/>
+            <!-- 数据库连接的驱动 -->
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <!-- 数据库连接的用户名 -->
+            <property name="hibernate.connection.username" value="root"/>
+            <!-- 数据库连接的密码 -->
+            <property name="hibernate.connection.password" value=""/>
+            <!-- 显示SQL语句 -->
+            <property name="hibernate.show_sql" value="true"/>
+
+            <property name="hibernate.connection.useUnicode" value="true"/>
+            <property name="hibernate.connection.characterEncoding" value="UTF-8"/>
+
+            <!-- 在显示SQL语句时格式化语句 -->
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.use_sql_comments" value="false"/>
+            <!-- 自动输出schema创建DDL语句 -->
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+
+            <!-- 数据库连接超时后自动重连 -->
+            <property name="hibernate.connection.autoReconnect" value="true"/>
+            <property name="connection.autoReconnectForPools" value="true"/>
+            <property name="connection.is-connection-validation-required" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
