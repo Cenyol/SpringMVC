@@ -19,7 +19,7 @@
        <!--用于支持Servlet、JSP视图解析-->
        <bean id="jspViewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
               <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
-              <property name="prefix" value="/WEB-INF/pages/"/>
+              <property name="prefix" value="/html/"/>
               <property name="suffix" value=".jsp"/>
        </bean>
 
