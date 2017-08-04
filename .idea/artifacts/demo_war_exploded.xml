@@ -39,6 +39,7 @@
           <element id="library" level="project" name="Maven: javassist:javassist:3.12.0.GA" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.34" />
           <element id="library" level="project" name="Maven: org.json:json:20080701" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-nop:1.8.0-alpha2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
