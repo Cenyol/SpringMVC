@@ -1,6 +1,8 @@
 package com.cenyol.example.controller;
 
 import com.cenyol.example.model.UserEntity;
+import com.cenyol.example.model.aspectj.Performance;
+import com.cenyol.example.model.aspectj.PerformanceImpl;
 import com.cenyol.example.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,9 +23,13 @@ public class MainController {
     @Autowired
     private UserRepository userRepository;
 
+    @Autowired
+    private Performance performance;
+
     // 首页
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
+        performance.perform();
         return "index";
     }
 
