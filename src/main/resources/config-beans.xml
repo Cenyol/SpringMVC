@@ -3,5 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean class="com.cenyol.example.model.autowire.interfaces.impl.SgtPeppers" />
+    <!--<bean id="sgtPeppers" class="com.cenyol.example.model.autowire.interfaces.impl.SgtPeppers" />-->
+
+    <bean id="blankDisc" class="com.cenyol.example.model.autowire.interfaces.impl.BlankDisc" >
+        <constructor-arg value="Sgt. Pepper's Lonely Hearts Club Band" />
+        <constructor-arg value="The Bearlesss" />
+    </bean>
 </beans>

@@ -27,5 +27,6 @@ public class CDPlayerTest {
     @Test
     public void cdShoudNotBeNull() {
         Assert.assertNotNull(cd);
+        cd.play();
     }
 }
