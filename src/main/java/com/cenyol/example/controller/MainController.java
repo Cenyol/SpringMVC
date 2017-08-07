@@ -23,13 +23,9 @@ public class MainController {
     @Autowired
     private UserRepository userRepository;
 
-    @Autowired
-    private Performance performance;
-
     // 首页
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public String index() {
-        performance.perform();
         return "index";
     }
 

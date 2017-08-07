@@ -9,3 +9,10 @@
 
 #### Join Point(连接点)
 上面说的一处两处的处，就是这边的连接点。我觉得这个和hook有点像，就是钩子，之前在开发web服务的时候，总是会出现一些hook，在特定的点会执行特定的hook。
+
+
+### 注意
+- 需要两个依赖：spring-aspects和aspectjweaver。见：https://www.mkyong.com/spring/classnotfoundexception-org-aspectj-weaver-reflect-reflectionworldreflectionworldexception/
+
+- 需要注意aspectjweaver版本与jdk的对应关系。我用的是jdk1.8，用了aspectjweaver1.5的时候会抛出错误：error at ::0 can't find referenced pointcut performance。把aspectjweaver改成1.8.x的就好了。见：http://www.cnblogs.com/xing901022/p/4267563.html
+
