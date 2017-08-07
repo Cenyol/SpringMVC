@@ -15,10 +15,10 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @RunWith(SpringJUnit4ClassRunner.class)
 
 // 指定要创建bean的xml文件
-@ContextConfiguration("classpath:config-beans.xml")
+//@ContextConfiguration("classpath:config-beans.xml")
 
 // 指定上下文配置文件，在这里就是指定要扫描哪个包下面的bean
-//@ContextConfiguration(classes = CDPlayerConfig.class)
+@ContextConfiguration(classes = CDPlayerConfig.class)
 public class CDPlayerTest {
 
     @Autowired
