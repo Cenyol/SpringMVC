@@ -11,5 +11,6 @@
 
     <bean class="com.cenyol.example.model.aspectj.PerformanceImpl"/>
 
+    <!-- 要记得把切面类也配置到bean容器中，不然待会怎么调用 -->
     <bean class="com.cenyol.example.model.aspectj.Audience" />
 </beans>
