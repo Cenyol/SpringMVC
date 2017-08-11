@@ -12,5 +12,28 @@
     <bean class="com.cenyol.example.model.aspectj.PerformanceImpl"/>
 
     <!-- 要记得把切面类也配置到bean容器中，不然待会怎么调用 -->
-    <bean class="com.cenyol.example.model.aspectj.Audience" />
+    <bean id="audience" class="com.cenyol.example.model.aspectj.Audience" />
+
+
+    <!-- 通过xml定义切面 -->
+    <aop:config>
+        <aop:aspect ref="audience">
+            <aop:pointcut id="perform"
+                expression="execution(* com.cenyol.example.model.aspectj.Performance.perform(..))" />
+
+            <aop:before method="silenceCellPhones"
+                pointcut-ref="perform"/>
+
+            <aop:before method="takeSeats"
+                pointcut-ref="perform"/>
+
+            <aop:after-returning method="applause"
+                pointcut="execution(* com.cenyol.example.model.aspectj.Performance.perform(..))"/>
+
+            <aop:after-throwing method="demandRefund"
+                pointcut="execution(* com.cenyol.example.model.aspectj.Performance.perform(..))"/>
+        </aop:aspect>
+    </aop:config>
+
+
 </beans>

@@ -12,8 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
  * @date 07/08/2017 11:35
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(classes = ConcertConfig.class)
-//@ContextConfiguration("classpath:aspectj-beans.xml")
+//@ContextConfiguration(classes = ConcertConfig.class)
+@ContextConfiguration("classpath:aspectj-beans.xml")
 public class PerformanceTest {
 
     @Autowired
