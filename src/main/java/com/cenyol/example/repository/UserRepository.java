@@ -22,4 +22,6 @@ public interface UserRepository extends JpaRepository<UserEntity, Integer> {
                            @Param("qLastName") String qLastName,
                            @Param("qPassword") String password,
                            @Param("qId") Integer id);
+
+    UserEntity findById(Integer userId);
 }

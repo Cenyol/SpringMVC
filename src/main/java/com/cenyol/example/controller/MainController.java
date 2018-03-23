@@ -74,10 +74,12 @@ public class MainController {
     // 更新用户信息页面
     @RequestMapping(value = "/updateUser/{userId}", method = RequestMethod.GET)
     public String updateUser(@PathVariable("userId") Integer userId, ModelMap modelMap){
-        UserEntity userEntity = userRepository.findOne(userId);
+        UserEntity userEntity = userRepository.findById(userId);
+//        UserEntity userEntity = userRepository.findOne(userId);
         modelMap.addAttribute("user", userEntity);
         return "updateUser";
     }
+
     // 处理用户修改请求
     @RequestMapping(value = "/updateUserPost", method = RequestMethod.POST)
     public String updateUserPost(@ModelAttribute("user") UserEntity userEntity){
