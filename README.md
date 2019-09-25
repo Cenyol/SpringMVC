@@ -38,7 +38,7 @@
 git clone https://github.com/Cenyol/SpringMVC.git
 ```
 
-2. 设计数据表，并在application.properties 中配置好数据库连接信息。本 demo 中已经配置好 h2 数据库样例和链接信息，可接着直接往下走。
+2. 设计数据表，并在application.properties 中配置好数据库连接信息
 
 3. 运行Code Generator
 ```bash
